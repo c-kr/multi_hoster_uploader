@@ -26,27 +26,36 @@ Multi Hoster Uploader serves as both a command-line tool and a Python package fo
 ## Installation
 
 1. Clone this repository:
-`git clone https://github.com/c-kr/multi_hoster_uploader.git
-`
+   ```bash
+   git clone https://github.com/c-kr/multi_hoster_uploader.git
+   ```
 2. Change into the project directory:
-`cd multi_hoster_uploader
-`
+   ```bash
+   cd multi_hoster_uploader
+   ```
 3. Install the required packages:
-`pip install -r requirements.txt
-`
+   ```bash
+   pip install -r requirements.txt
+   ```
 4. Optionally symlink the CLI Tool to your PATH
-`ln -s /path/to/multi_hoster_uploader/multi_hoster_uploader ~/.local/bin/multi_hoster_uploader
-`
+   ```bash
+   ln -s /path/to/multi_hoster_uploader/multi_hoster_uploader ~/.local/bin/multi_hoster_uploader
+   ```
 
 ## Usage
 
 Upload a file using the default hosters and order:
-`multi_hoster_uploader --file /path/to/your/file.txt
-`
+```bash
+multi_hoster_uploader --file /path/to/your/file.txt
+```
 
 Upload a file using a random hoster order:
-`multi_hoster_uploader --file /path/to/your/file.txt --random-hoster
-`
+```bash
+multi_hoster_uploader --file /path/to/your/file.txt --random-hoster
+```
+
+To modify the default hoster sequence, adjust the HOSTERS variable within the multi_hoster_uploader file.
+
 ## Using MultiHosterManager in Your Own Script
 
 To use the `MultiHosterManager` class in your own script, follow these steps:

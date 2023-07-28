@@ -1,7 +1,8 @@
-import requests
-from urllib.parse import urlparse
 from typing import Any, List, Tuple, Union
+from urllib.parse import urlparse
 from pathlib import Path
+
+import requests
 
 class Hoster:
     def __init__(self, upload_url: str, upload_url_keys: List[str], success_keys: List[str], success_values: Union[List[Union[str, bool]], None] = None) -> None:

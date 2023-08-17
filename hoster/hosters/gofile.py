@@ -1,6 +1,7 @@
 from hoster.base_hoster import Hoster
 import requests
 
+
 class GofileHoster(Hoster):
     def __init__(self):
         super().__init__(

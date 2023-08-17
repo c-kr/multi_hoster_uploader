@@ -1,6 +1,7 @@
 import json
 from hoster.base_hoster import Hoster
 
+
 class FileIoHoster(Hoster):
 
     def __init__(self):

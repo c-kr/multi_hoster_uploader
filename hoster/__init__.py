@@ -1,8 +1,8 @@
-from hoster.hosters import AnonfilesHoster, FileIoHoster, BayfilesHoster, GofileHoster
 from hoster.base_hoster import Hoster
 from random import shuffle
 from typing import List, Optional, Type, Union
 from pathlib import Path
+
 
 class MultiHosterManager:
     def __init__(self, hosters: List[Type[Hoster]], random_hoster: bool = False):

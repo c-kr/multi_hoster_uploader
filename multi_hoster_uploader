@@ -9,11 +9,12 @@ License: MIT
 
 import argparse
 from hoster import MultiHosterManager
-from hoster.hosters import AnonfilesHoster,BayfilesHoster, FileIoHoster, GofileHoster, KeepShHoster
+from hoster.hosters import FileIoHoster, GofileHoster, KeepShHoster
 from sys import exit
 
 # define the hoster classes to use in the order to try
-HOSTERS = [FileIoHoster, GofileHoster, BayfilesHoster, KeepShHoster, AnonfilesHoster]
+HOSTERS = [FileIoHoster, GofileHoster, KeepShHoster]
+
 
 def main():
     parser = argparse.ArgumentParser(description='Upload a file to various file hosting services.')
@@ -30,6 +31,7 @@ def main():
     else:
         print('Upload failed.')
         exit(2)
+
 
 if __name__ == '__main__':
     main()

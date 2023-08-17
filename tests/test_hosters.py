@@ -1,13 +1,12 @@
 import unittest
 import os
-from hoster.hosters import AnonfilesHoster, BayfilesHoster, FileIoHoster, GofileHoster, KeepShHoster
+from hoster.hosters import FileIoHoster, GofileHoster, KeepShHoster
+
 
 class TestHosters(unittest.TestCase):
 
     def setUp(self):
         self.file_path = 'test_file.txt'
-        self.anonfiles_hoster = AnonfilesHoster()
-        self.bayfiles_hoster = BayfilesHoster()
         self.file_io_hoster = FileIoHoster()
         self.gofile_hoster = GofileHoster()
         self.keepsh_hoster = KeepShHoster()
@@ -26,12 +25,6 @@ class TestHosters(unittest.TestCase):
         self.assertIsNotNone(upload_url)
         self.assertTrue(upload_url.startswith("https"))
 
-    def test_anonfiles_upload(self):
-        self._assert_upload(self.anonfiles_hoster)
-
-    def test_bayfiles_upload(self):
-        self._assert_upload(self.bayfiles_hoster)
-
     def test_file_io_upload(self):
         self._assert_upload(self.file_io_hoster)
 
@@ -40,6 +33,7 @@ class TestHosters(unittest.TestCase):
 
     def test_keepsh_upload(self):
         self._assert_upload(self.keepsh_hoster)
+
 
 if __name__ == '__main__':
     unittest.main()

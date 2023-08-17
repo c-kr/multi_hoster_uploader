@@ -2,6 +2,7 @@ import os
 import requests
 from hoster.base_hoster import Hoster
 
+
 class KeepShHoster(Hoster):
 
     def __init__(self, bucket_name='free'):

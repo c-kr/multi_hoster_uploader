@@ -16,8 +16,6 @@ Multi Hoster Uploader serves as both a command-line tool and a Python package fo
 
 | Hoster                                                                                                  | Status                                                                                                                                                                                         |
 |---------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://anonfiles.com/favicon.ico" width="16" height="16" alt="Anonfiles Favicon"> Anonfiles  | [![Anonfiles](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-anonfile.yml/badge.svg)](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-anonfile.yml) |
-| <img src="https://bayfiles.com/favicon.ico" width="16" height="16" alt="Bayfiles Favicon"> Bayfiles     | [![Bayfiles](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-bayfiles.yml/badge.svg)](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-bayfiles.yml)  |
 | <img src="https://www.file.io/favicon.ico" width="16" height="16" alt="FileIo Favicon"> FileIo          | [![FileIO](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-file_io.yml/badge.svg)](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-file_io.yml)      |
 | <img src="https://gofile.io/dist/img/favicon16.png" width="16" height="16" alt="Gofile Favicon"> GoFile | [![GoFile](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-gofile.yml/badge.svg)](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-gofile.yml)        |
 | KeepSh                                                                                                  | [![KeepSh](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-keepsh.yml/badge.svg)](https://github.com/c-kr/multi_hoster_uploader/actions/workflows/test-keepsh.yml)        |
@@ -64,13 +62,13 @@ To use the `MultiHosterManager` class in your own script, follow these steps:
 
 ```python
 from hoster import MultiHosterManager
-from hoster.hosters import AnonfilesHoster, BayfilesHoster, FileIoHoster, GofileHoster, KeepShHoster
+from hoster.hosters import FileIoHoster, GofileHoster, KeepShHoster
 ```
    
 Instantiate the MultiHosterManager class with the list of hoster classes and, optionally, a flag to randomize the hoster order:
 
 ```python
-manager = MultiHosterManager([FileIoHoster, GofileHoster, BayfilesHoster, KeepShHoster, AnonfilesHoster], random_hoster=True)
+manager = MultiHosterManager([FileIoHoster, GofileHoster, KeepShHoster], random_hoster=True)
 ```
 
 Call the upload method of the MultiHosterManager instance, providing the file path as an argument:
